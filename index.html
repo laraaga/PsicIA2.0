@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PsicIA</title>
+  
+  <link rel="stylesheet" href="styles.css">
+  
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  
+  <div class="container">
+    <div class="chat-box">
+      
+     <div class="config-icon">⚙️</div>
+     <div id="boas-vindas" class="mensagem-bem-vindo"></div>
+      <div class="chat-header">  </div> 
+      <div class="chat-messages" id="chatBox">
+        
+      </div>
+      <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Como você está se sentindo hoje?">
+        <button class="enviar-button" onclick="enviarMensagem()">
+        <img class="enviar-icon" src="envir.png" alt="Ícone de enviar">
+      </button>
+          
+      </div>
+    </div>
+
+    <div class="button-group">
+      
+      <<button class="function-button breathing" id="btnRespiracao" onclick="abrirRespiracao()">
+        <img src="PsicIA__2_-removebg-preview.png" alt="ícone respiração" class="icon" />
+        <span>Exercício de<br>Respiração</span>
+      </button>
+      
+      <button class="function-button meditation" onclick="window.location.href='meditacao.html'">
+        <img src="PsicIA__1_-removebg-preview.png" alt="ícone meditação" class="icon" />
+        <span>Meditação</span>
+      </button>
+      
+      <button class="function-button breathing">
+        <img src="PsicIA-removebg-preview.png" alt="ícone ajuda" class="icon" />
+        <span>Preciso de Ajuda</span>
+      </button>
+      
+    </div>
+
+   
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
