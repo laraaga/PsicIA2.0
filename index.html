@@ -12,6 +12,8 @@
 <body>
   
   <header>
+    <button onclick="toggleDarkMode()" class="modo-btn">🌙 Modo</button>
+
     <div class="logo">
       <img src="logo.png" alt="Logo" style="height: 80px;" />
     </div>
@@ -27,17 +29,10 @@
 
   <main>
     <section>
-    <div class="container">
-  <div class="chat-input" onclick="abrirChat()">
-    <input type="text" id="userInput" placeholder="Como você está se sentindo hoje?">
-    <button class="enviar-button" onclick="enviarMensagem()">
-      <img class="enviar-icon" src="envir.png" alt="Ícone de enviar">
-    </button>
-  </div>
-</div>
+    
 
 
-    <div class="button-group">
+    <div class="button-group" id="funcoes">
       <button class="function-button breathing" onclick="abrirRespiracao()">
         <img src="respirar.png" alt="ícone respiração" class="icon" />
         <span>Exercício de<br />Respiração</span>
@@ -57,7 +52,20 @@
         <img src="psicologo.png" alt="ícone respiração" class="icon" />
         <span>Psicologos<br />pertos de voce</span>
       </button>
+
+      
     </div>
+    <div class="chat-bar-container">
+  <input
+    type="text"
+    id="chatInput"
+    placeholder="Como está se sentindo hoje?"
+    autocomplete="off"
+  />
+  <button id="sendButton">
+    <img src="envir.png" alt="Enviar" />
+  </button>
+</div>
 </section>
 <section id="sobre" class="sobre-nos">
   <div class="texto">
