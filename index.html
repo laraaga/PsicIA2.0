@@ -1,57 +1,80 @@
-
 <!DOCTYPE html>
 <html lang="pt-br"> 
 <head>
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PsicIA</title>
-  
-  <link rel="stylesheet" href="styles.css">
-  
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
   
-  <div class="container">
-    <div class="chat-box">
-      
-     <div class="config-icon">⚙️</div>
-     <div id="boas-vindas" class="mensagem-bem-vindo"></div>
-      <div class="chat-header">  </div> 
-      <div class="chat-messages" id="chatBox">
-        
-      </div>
-      <div class="chat-input">
-        <input type="text" id="userInput" placeholder="Como você está se sentindo hoje?">
-        <button class="enviar-button" onclick="enviarMensagem()">
-        <img class="enviar-icon" src="envir.png" alt="Ícone de enviar">
-      </button>
-          
-      </div>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo" style="height: 80px;" />
     </div>
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Sobre</a></li>
+         <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+    <div class="container">
+  <div class="chat-input" onclick="abrirChat()">
+    <input type="text" id="userInput" placeholder="Como você está se sentindo hoje?">
+    <button class="enviar-button" onclick="enviarMensagem()">
+      <img class="enviar-icon" src="envir.png" alt="Ícone de enviar">
+    </button>
+  </div>
+</div>
+
 
     <div class="button-group">
-      
-      <<button class="function-button breathing" id="btnRespiracao" onclick="abrirRespiracao()">
-        <img src="PsicIA__2_-removebg-preview.png" alt="ícone respiração" class="icon" />
-        <span>Exercício de<br>Respiração</span>
+      <button class="function-button breathing" onclick="abrirRespiracao()">
+        <img src="respirar.png" alt="ícone respiração" class="icon" />
+        <span>Exercício de<br />Respiração</span>
       </button>
-      
+
       <button class="function-button meditation" onclick="window.location.href='meditacao.html'">
-        <img src="PsicIA__1_-removebg-preview.png" alt="ícone meditação" class="icon" />
+        <img src="meditar.png" alt="ícone meditação" class="icon" />
         <span>Meditação</span>
       </button>
-      
-      <button class="function-button breathing">
-        <img src="PsicIA-removebg-preview.png" alt="ícone ajuda" class="icon" />
+
+      <button class="function-button breathing" onclick="mostrarAjuda()">
+        <img src="ajuda.png" alt="ícone ajuda" class="icon" />
         <span>Preciso de Ajuda</span>
       </button>
-      
-    </div>
 
-   
+      <button class="function-button breathing" onclick="acharPsicologos()">
+        <img src="psicologo.png" alt="ícone respiração" class="icon" />
+        <span>Psicologos<br />pertos de voce</span>
+      </button>
+    </div>
+</section>
+<section id="sobre" class="sobre-nos">
+  <div class="texto">
+    <h2>Sobre Nós</h2>
+    <p>
+      Somos uma equipe dedicada a oferecer as melhores soluções para nossos clientes. 
+      Nosso compromisso é com a qualidade, inovação e satisfação. Estamos sempre em 
+      busca de aprimorar nossos serviços para atender às suas necessidades.
+    </p>
   </div>
+  <div class="imagem">
+    <img src="image-removebg-preview (2).png" alt="Imagem sobre nós" />
+  </div>
+</section>
+
+  </main>
+
   <script src="script.js"></script>
 </body>
 </html>

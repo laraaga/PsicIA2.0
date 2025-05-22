@@ -87,5 +87,29 @@ function abrirRespiracao() {
 
 
 
+function acharPsicologos() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        const lat = pos.coords.latitude;
+        const lon = pos.coords.longitude;
+        
+        const url = `https://www.google.com/maps/search/psicólogos/@${lat},${lon},14z`;
+        window.open(url, '_blank');
+      },
+      (err) => {
+        alert('Não foi possível obter sua localização. Por favor, permita o acesso à localização.');
+      }
+    );
+  } else {
+    alert('Geolocalização não suportada pelo seu navegador.');
+  }
+}
+
+
+
+
+
+
 
   

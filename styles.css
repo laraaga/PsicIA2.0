@@ -1,57 +1,107 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Playwrite+NZ:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
 
-  .button-group {
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
-    gap: 10px;
-    align-items: center;
-    width: 100%;
-  }
-
-  .chat-box {
-    width: 100%;
-    max-width: 90%;
-  }
-
-  .function-button {
-    width: 90%;
-    justify-content: center;
-  }
-}
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-image: url(Brown\ and\ Beige\ Vintage\ Project\ History\ Presentation.png);
-  height: 100vh;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+display: block;
+  background-color: #d5f6fd;
+  width: 100%;
+}
+header {
+  background: url(header.png);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+}
+section {
+  padding: 60px 20px;
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 60px;
+}
+.sobre-nos .texto,
+.sobre-nos .imagem {
+  flex: 1 1 45%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
   align-items: center;
 }
 
-.container {
-  position: relative;
+nav li {
+  transition: transform 0.3s ease;
+}
+
+nav li:hover {
+  transform: translateY(-5px);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+
+.sobre-nos {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; 
+}
+
+.sobre-nos .texto {
+  flex: 1 1 400px; 
+}
+
+.sobre-nos .imagem {
+  flex: 1 1 400px;
+}
+
+.sobre-nos .imagem img {
   width: 100%;
-  max-width: 1000px;
-  height: 90%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+
+main {
+  display: block;
+  width: 100%;
+  align-items: center;
+ 
+  padding-top: 80px;
+}
+.container {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   gap: 20px;
   flex-wrap: wrap;
+  
 }
+
 
 .mensagem-bem-vindo {
   font-size: 1.2rem;
@@ -157,19 +207,60 @@ body {
 }
 
 .chat-input {
+  
   display: flex;
   margin-top: 10px;
 }
 
 .chat-input input {
+  
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  padding-left: 15px;
+  text-align: left;
   background-color: #b9e4ff;
   flex-grow: 1;
   border-radius: 20px;
   border: none;
-  padding: 10px 19px;
+  padding: 15px 200px;
   font-size: 18px;
+  min-width: 0;
 }
 
+.chat-input input[type="text"] {
+  text-align: left; 
+  
+  padding-left: 40px; 
+  
+  text-align: left;
+  
+}.enviar-button {
+  background-color: #4970c0cc;
+  color: #000;
+  padding: 0px 8px;
+  border: none;
+  border-radius: 20px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.enviar-icon {
+  width: 24px; height: 24px;
+}
+
+.enviar-button:hover {
+  background-color: #9b9b9b;
+}
 .input-container {
   display: flex;
   align-items: center;
@@ -187,31 +278,21 @@ body {
   color: #333;
 }
 
-.enviar-button {
-  background-color: #4970c0cc;
-  color: #000;
-  padding: 8px 10px;
-  border: none;
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
 
-.enviar-icon {
-  width: 24px;
-  height: 24px;
-}
 
-.enviar-button:hover {
-  background-color: #9b9b9b;
+.chat-messages {
+  font-size: 14px;
+  color: #333;
+  max-height: 270px;
+  overflow-y: auto;
 }
 
 .button-group {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 60px;
+  align-items: center;
+  flex-direction:row;
+  gap: 35px;
+  margin-top: 20px;
   position: relative;
 }
 
@@ -302,6 +383,10 @@ body {
 .typing-dots span:nth-child(3) {
   animation-delay: 0.4s;
 }
+
+
+
+
 
 @keyframes bounce {
   0%, 80%, 100% {
