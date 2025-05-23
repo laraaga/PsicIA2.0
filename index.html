@@ -5,84 +5,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PsicIA</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
-  
   <header>
-    <button onclick="toggleDarkMode()" class="modo-btn">🌙 Modo</button>
+    <button onclick="toggleDarkMode()" class="modo-btn" id="darkModeBtn">
+      <i class="fa-regular fa-moon"></i>
+    </button>
 
     <div class="logo">
       <img src="logo.png" alt="Logo" style="height: 80px;" />
     </div>
+
     <nav>
       <ul>
         <li><a href="#">Início</a></li>
         <li><a href="#">Sobre</a></li>
-         <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
-        
+        <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section>
-    
+      <div id="boas-vindas" class="boas-vindas"></div>
 
+      <div class="button-group" id="funcoes">
+        <button class="function-button breathing" onclick="abrirRespiracao()">
+          <img src="respirar.png" alt="ícone respiração" class="icon" />
+          <span>Exercício de<br />Respiração</span>
+        </button>
 
-    <div class="button-group" id="funcoes">
-      <button class="function-button breathing" onclick="abrirRespiracao()">
-        <img src="respirar.png" alt="ícone respiração" class="icon" />
-        <span>Exercício de<br />Respiração</span>
-      </button>
+        <button class="function-button meditation" onclick="window.location.href='meditacao.html'">
+          <img src="meditar.png" alt="ícone meditação" class="icon" />
+          <span>Meditação</span>
+        </button>
 
-      <button class="function-button meditation" onclick="window.location.href='meditacao.html'">
-        <img src="meditar.png" alt="ícone meditação" class="icon" />
-        <span>Meditação</span>
-      </button>
+        <button class="function-button breathing" onclick="mostrarAjuda()">
+          <img src="ajuda.png" alt="ícone ajuda" class="icon" />
+          <span>Preciso de Ajuda</span>
+        </button>
 
-      <button class="function-button breathing" onclick="mostrarAjuda()">
-        <img src="ajuda.png" alt="ícone ajuda" class="icon" />
-        <span>Preciso de Ajuda</span>
-      </button>
+        <button class="function-button breathing" onclick="acharPsicologos()">
+          <img src="psicologo.png" alt="ícone respiração" class="icon" />
+          <span>Psicologos<br />pertos de voce</span>
+        </button>
+      </div>
 
-      <button class="function-button breathing" onclick="acharPsicologos()">
-        <img src="psicologo.png" alt="ícone respiração" class="icon" />
-        <span>Psicologos<br />pertos de voce</span>
-      </button>
+      <div id="chatBox" class="chat-container">
+       
+      </div>
 
-      
-    </div>
-    <div class="chat-bar-container">
-  <input
-    type="text"
-    id="chatInput"
-    placeholder="Como está se sentindo hoje?"
-    autocomplete="off"
-  />
-  <button id="sendButton">
-    <img src="envir.png" alt="Enviar" />
-  </button>
-</div>
-</section>
-<section id="sobre" class="sobre-nos">
-  <div class="texto">
-    <h2>Sobre Nós</h2>
-    <p>
-      Somos uma equipe dedicada a oferecer as melhores soluções para nossos clientes. 
-      Nosso compromisso é com a qualidade, inovação e satisfação. Estamos sempre em 
-      busca de aprimorar nossos serviços para atender às suas necessidades.
-    </p>
-  </div>
-  <div class="imagem">
-    <img src="image-removebg-preview (2).png" alt="Imagem sobre nós" />
-  </div>
-</section>
+      <div class="chat-bar-container" id="chatBar" onclick="abrirChat()">
+        <input type="text" id="userInput" placeholder="Como está se sentindo hoje?" />
+        <button onclick="enviarMensagem(event)">
+          <img src="envir.png" alt="Enviar" />
+        </button>
+      </div>
 
+    </section>
+
+    <section id="sobre" class="sobre-nos">
+      <div class="texto">
+        <h2>Sobre Nós</h2>
+        <p>
+          Somos uma equipe dedicada a oferecer as melhores soluções para nossos clientes. 
+          Nosso compromisso é com a qualidade, inovação e satisfação. Estamos sempre em 
+          busca de aprimorar nossos serviços para atender às suas necessidades.
+        </p>
+      </div>
+      <div class="imagem">
+        <img src="nois.png" alt="Imagem sobre nós" />
+      </div>
+    </section>
   </main>
 
   <script src="script.js"></script>
+  
 </body>
 </html>

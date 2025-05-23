@@ -14,6 +14,23 @@
                 <label for="new-username">Usuário</label>
                 <input type="text" id="new-username" placeholder="Escolha um nome de usuário">
             </div>
+
+
+<div class="input-group">
+  <label for="genero">Gênero</label>
+  <select id="genero" name="genero" class="select-genero">
+    <option value="">Selecione...</option>
+    <option value="feminino">Feminino</option>
+    <option value="masculino">Masculino</option>
+    <option value="neutro">Prefiro não dizer</option>
+  </select>
+</div>
+
+
+            <div class="input-group">
+              <div class="input-group"><label for="email">Email</label>
+            <input type="email" id="email" placeholder="Digite seu email">
+            </div>
             <div class="input-group">
                 <label for="new-password">Senha</label>
                 <input type="password" id="new-password" placeholder="Crie uma senha">
@@ -48,6 +65,7 @@
             alert("Cadastro realizado com sucesso!");
             window.location.href = "login.html";
         }
+        
     </script>
 </body>
 </html>
